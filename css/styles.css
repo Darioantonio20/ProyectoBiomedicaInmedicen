@@ -1,0 +1,86 @@
+body {
+    font-family: 'Krub', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D6EAF8; /* Azul pastel muy claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 700px;
+    height: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Sección para la imagen de la empresa */
+.company-image {
+    background-image: url('/img/portada.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+}
+
+/* Contenedor para el formulario de inicio de sesión */
+.login-container {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff; /* Fondo blanco para la parte del formulario */
+}
+
+.login-header {
+    text-align: center; /* Centrar horizontalmente */
+}
+
+.login-header h1 {
+    margin: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input,
+.login-form button {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.login-form button {
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilos para botones específicos según tu paleta de colores */
+.btn-admin { background-color: #CB4335; }
+.btn-mantenimiento { background-color: #5499C7; }
+.btn-lectura { background-color: #5DADE2; }
+
+.btn-admin:hover { background-color: #B03A2E; }
+.btn-mantenimiento:hover { background-color: #2980B9; }
+.btn-lectura:hover { background-color: #3498DB; }
+
+.error-msg {
+    color: red;
+    text-align: center;
+    display: none;
+}
