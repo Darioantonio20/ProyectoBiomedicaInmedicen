@@ -9,69 +9,104 @@ $id_equipo = isset($_GET['id']) ? intval($_GET['id']) : 0;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formatos de Mantenimiento</title>
-    <!-- Enlace a Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Estilos generales */
         body {
             font-family: Arial, sans-serif;
-            margin-top: 50px;
         }
 
-        .titulo {
-            text-align: center;
-        }
+.btn-primary-serch{
+    display: inline-block; /* Cambia a inline-block */
+    width: 100%;
+    font-weight: bold;
+    background: #0048A0;
+    color: white;
+    padding-block: 15px;
+    margin: 1.25rem 23% 1.25rem 5%; /* Reduce el margen izquierdo */
+    border-radius: 20px;
+    box-shadow: #0048A0 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.btn-primary-serch:hover {
+    transform: scale(1.03);
+    box-shadow: #0048A0 0px 23px 10px -20px;
+}
 
-        h1 {
-            text-align: center;
-        }
+.btn-primary-serch:active {
+    transform: scale(0.95);
+    box-shadow: #0048A0 0px 15px 10px -10px;
+} 
 
-        /* Estilos para los botones de formato */
-        .btn-formato {
-            display: block;
-            margin-bottom: 10px;
-            background-color: #007bff;
-            border-color: #007bff;
-            color: #fff;
-        }
+.btn-danger{
+    display: inline-block; /* Cambia a inline-block */
+    width: 100%;
+    font-weight: bold;
+    background: #ff0000;
+    color: white;
+    padding-block: 15px;
+    margin: 1.25rem 23% 1.25rem 5%; /* Reduce el margen izquierdo */
+    border-radius: 20px;
+    box-shadow: #ff0000 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.btn-danger:hover {
+    transform: scale(1.03);
+    box-shadow: #ff0000 0px 23px 10px -20px;
+}
 
-        .btn-formato:hover {
-            background-color: #0056b3;
-            border-color: #0056b3;
-        }
+.btn-danger:active {
+    transform: scale(0.95);
+    box-shadow: #ff0000 0px 15px 10px -10px;
+}
 
-        .btn-success {
-            display: block;
-            margin-bottom: 10px;
-            background-color: #CB4335;
-            border-color: #CB4335;
-        }
-        
-
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6rem;
+    color: rgb(16, 137, 211);
+}
+.btn-primary-serch, .btn-danger {
+    color: #ffffff; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina la línea debajo del texto */
+}
+.col-md-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.btn-primary-serch:hover, .btn-danger:hover {
+    color: #ffffff; /* Cambia el color del texto a blanco cuando se pasa el cursor sobre el enlace */
+    text-decoration: none; 
+}
+.rowBtnRegresar{
+    display: flex;
+    justify-content: center;
+}
     </style>
 </head>
     <div class="container">
-        <h1>Formatos de Mantenimiento</h1>
+        <h1 class="heading mb-5 ">Formatos de Mantenimiento</h1>
         <div class="row">
             <div class="col-md-4">
-                <!-- Botón para Formato de Cotización (general para todos los equipos) -->
-                <a href="fpdf/cotizacion.pdf" class="btn btn-formato" target="_blank">Formato de Cotización</a>
+                <a href="fpdf/cotizacion.pdf" class="btn-primary-serch" target="_blank">Formato de Cotización</a>
             </div>
             <div class="col-md-4">
-                <!-- Botón para Formato de Hoja de Salida (general para todos los equipos) -->
-                <a href="fpdf/hoja_salida.pdf" class="btn btn-formato" target="_blank">Formato de Hoja de Salida</a>
+                <a href="fpdf/hoja_salida.pdf" class="btn-primary-serch" target="_blank">Formato de Hoja de Salida</a>
             </div>
             <div class="col-md-4">
-                <!-- Botón para Formato de Hoja de Servicio (específico para el equipo) -->
-                <a href="reportefpdf.php?id_equipo=<?php echo $id_equipo; ?>" class="btn btn-formato" target="_blank">Formato de Hoja de Servicio</a>
+                <a href="reportefpdf.php?id_equipo=<?php echo $id_equipo; ?>" class="btn-primary-serch" target="_blank">Formato de Hoja de Servicio</a>
             </div>
-            <div class="col-md-4">
-                <!-- Botón pa regresar-->
-                <a href="mantenimiento.php?id_equipo=<?php echo $id_equipo; ?>" class="btn btn-success">Regresar</a>
+        </div>
+        <div class="rowBtnRegresar">
+            <div class="col-md-4" style="display: flex; justify-content: center;">
+                <a href="mantenimiento.php?id_equipo=<?php echo $id_equipo; ?>" class="btn-danger">Regresar</a>
             </div>
         </div>
     </div>
-
-    <!-- ... Tus scripts de JS ... -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
