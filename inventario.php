@@ -41,60 +41,6 @@ $result = $conn->query($query);
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #D6EAF8; /* Azul pastel muy claro */
-        }
-
-        .container {
-            margin-top: 20px;
-        }
-
-        .card {
-            margin-bottom: 20px;
-        }
-
-        .card-header {
-            background-color: #3498DB; /* Azul claro */
-            color: white;
-        }
-
-        h3 {
-            font-family: sans-serif; 
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .btn-success {
-            background-color: #5499C7; /* Azul un poco más oscuro */
-            border-color: #5499C7; /* Borde del botón */
-        }
-
-        .btn-success:hover {
-            background-color: #2980B9; /* Azul más oscuro al hacer hover */
-            border-color: #2980B9; /* Borde más oscuro al hacer hover */
-        }
-
-        .btn-primary {
-            background-color: #5499C7; /* Azul un poco más oscuro */
-            border-color: #5499C7; /* Borde del botón */
-        }
-
-        .btn-primary:hover {
-            background-color: #2980B9; /* Azul más oscuro al hacer hover */
-            border-color: #2980B9; /* Borde más oscuro al hacer hover */
-        }
-
-        .btn-danger {
-            background-color: #CB4335; /* Rojo */
-            border-color: #CB4335; /* Borde del botón */
-        }
-
-        .btn-danger:hover {
-            background-color: #B03A2E; /* Rojo más oscuro al hacer hover */
-            border-color: #B03A2E; /* Borde más oscuro al hacer hover */
-        }
-
-        .table {
-            background-color: white; /* Fondo blanco de la tabla */
         }
 
         .btn-formato {
@@ -102,6 +48,254 @@ $result = $conn->query($query);
             font-size: 0.800rem;
         }
 
+.btn-primary {
+    display: block;
+    width: 15%;
+    font-weight: bold;
+    background: #0048A0;
+    color: white;
+    padding-block: 15px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: #0048A0 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+   .btn-primary:hover {
+    transform: scale(1.03);
+    box-shadow: #0048A0 0px 23px 10px -20px;
+  }
+
+   .btn-primary:active {
+    transform: scale(0.95);
+    box-shadow: #0048A0 0px 15px 10px -10px;
+  }
+
+  .btn-danger {
+  display: block;
+  width: 15%;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(211, 16, 16) 0%, rgb(209, 18, 18) 100%);
+  color: white;
+  padding-block: 15px;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: rgba(215, 133, 133, 0.878) 0px 20px 10px -15px;
+  border: none;
+  transition: all 0.2s ease-in-out;
+  }
+
+  .btn-danger:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(215, 133, 133, 0.878) 0px 23px 10px -20px;
+  }
+
+  .tn-dange:active {
+  transform: scale(0.95);
+  box-shadow: rgba(215, 133, 133, 0.878) 0px 15px 10px -10px;
+  }
+  .button-container {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Added to wrap buttons to next line if container width is not enough */
+}
+.button-row {
+    display: flex; /* Hace que los hijos del div se alineen en una fila */
+    justify-content: space-around; /* Distribuye el espacio alrededor de los botones de manera uniforme */
+}
+.colortr{
+    color: #ffffff;
+}
+.data-table th h1 {
+    font-weight: bold;
+    font-size: auto;
+    text-align: center; 
+    color: #ffffff;
+}
+
+.data-table td {
+    font-weight: normal;
+    font-size: 1em;
+    text-align: center; /* Añadido para centrar el texto */
+    -webkit-box-shadow: 0 2px 2px -2px #9d9d9e;
+    -moz-box-shadow: 0 2px 2px -2px #9d9d9e;
+    box-shadow: 0 2px 2px -2px #9d9d9e;
+}
+
+.data-table {
+    text-align: center;
+    overflow-x: auto; /* Added for horizontal scrolling on smaller screens */
+    width: 97%; /* Changed from 90vw to 100% for full width */
+    margin: 0 auto;
+    display: table;
+    padding: 0 0 8em 0;
+    border-radius: 3rem; /* Added border radius */
+}
+
+.data-table td, .data-table th {
+    padding: 4%; 
+    width: 10%; /* Added for equal width of all cells */
+    margin: 1%; /* Added for spacing */
+}
+.data-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.data-table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.data-table th {
+    background-color: #a40000d0;
+}
+.nombre-alumno,
+.tipo-busqueda {
+    color: #a8a8b1;
+}
+.data-table td:first-child { color: #a9b1a8; }
+
+.data-table tr:hover {
+    background-color: #ffffff;
+    -webkit-box-shadow: 0 6px 6px -6px #9d9d9e;
+    -moz-box-shadow: 0 6px 6px -6px #9d9d9e;
+    box-shadow: 0 6px 6px -6px #9d9d9e;
+}
+
+.data-table td:hover {
+    background-color: #ffffff;
+    color: #383737;
+    font-weight: bold;
+    
+    box-shadow: #9d9d9e -1px 1px, #9d9d9e -2px 2px, #9d9d9e -3px 3px, #9d9d9e -4px 4px, #9d9d9e -5px 5px, #9d9d9e -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+@media (max-width: 800px) {
+.data-table td:nth-child(4),
+.data-table th:nth-child(4) { display: none; }
+}
+
+/* Existing styles... */
+
+/* Responsive table */
+@media screen and (max-width: 600px) {
+    .data-table {
+        border: 0;
+        width: 100%;
+    }
+
+    .data-table thead {
+        display: none;
+    }
+
+    .data-table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .data-table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    .data-table td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .data-table thead {
+        display: none;
+    }
+
+    .data-table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .data-table th, .data-table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    .data-table th::before, .data-table td::before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+
+/* input */
+
+.contenedor {
+    margin-top: 3rem; /* Ajusta este valor según tus necesidades */
+}
+
+.group {
+    display: flex;
+    line-height: 2rem;
+    align-items: center;
+    position: relative;
+    max-width: 45%;
+    margin: auto;
+    margin-bottom: 3rem;
+    justify-content: center;
+}
+  
+.input {
+    width: 45vw;
+    height: 6vh;
+    line-height: 2rem;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #d8d8e8;
+    color: #0d0c22;
+    text-align: center; /* Añadido para centrar el texto */
+    box-shadow: 0 0 5px #9691c2, 0 0 0 10px #f5f5f5eb;
+    transition: .3s ease;
+}
+  
+  .input::placeholder {
+    color: #777;
+  }
+  
+  .icon {
+    position: absolute;
+    left: 1rem;
+    fill: #777;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row; /* Changed from column to row */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Added to wrap buttons to next line if container width is not enough */
+}
 
     </style>
 </head>
@@ -112,25 +306,25 @@ $result = $conn->query($query);
         <div class="row mb-4">
             <div class="col-lg-12">
                 <form method="GET" class="form-inline justify-content-center">
-                    <input type="text" id="search" name="search" class="form-control" placeholder="Buscar..." value="<?php echo htmlspecialchars($searchTerm); ?>">
-                    <button type="submit" class="btn btn-success">Buscar</button> <!-- Botón verde -->
+                    <input type="text" id="search" name="search" class="input" placeholder="Buscar..." value="<?php echo htmlspecialchars($searchTerm); ?>">
+                    <button type="submit" class="btn-primary">Buscar</button> <!-- Botón verde -->
                 </form>
             </div>
         </div>
 
         <!-- Botón para añadir mantenimiento -->
-        <div class="text-center mb-4">
-            <button type="button" class="btn btn-success" onclick="window.location.href='mantenimiento.php';">Crear Mantenimiento</button>
-            <button type="button" class="btn btn-primary" onclick="window.location.href='registro.html';">Añadir Equipo</button> <!-- Cambio a botón azul -->
-            <button type="button" class="btn btn-primary" onclick="window.location.href='insumos.php';">Busqueda de Insumo</button> <!-- Cambio a botón azul -->
-            <button type="button" class="btn btn-danger" onclick="window.location.href='inicio.html';">Cerrar Sesión</button> <!-- Cambio a botón azul -->
+        <div class="text-center mb-4 button-row">
+            <button type="button" class="btn-primary" onclick="window.location.href='mantenimiento.php';">Crear Mantenimiento</button>
+            <button type="button" class="btn-primary" onclick="window.location.href='registro.html';">Añadir Equipo</button>
+            <button type="button" class="btn-primary" onclick="window.location.href='insumos.php';">Busqueda de Insumo</button>
+            <button type="button" class="btn-danger" onclick="window.location.href='inicio.html';">Cerrar Sesión</button>
         </div>
 
         <!-- Presentación de Resultados con los campos ajustados -->
         <?php
         if ($result && $result->num_rows > 0) {
-            echo "<table class='table'>";
-            echo "<thead class='thead-light'><tr><th>#</th><th>ID</th><th>Nombre del Equipo</th><th>Marca</th><th>Modelo</th><th>Número de Serie</th><th>Número de Control</th><th>Institución</th><th>Formato</th><th>Acciones</th></tr></thead>";
+            echo "<table class='data-table'>";
+            echo "<thead class='thead-light'><tr class='colortr'><th>#</th><th>ID</th><th>Nombre del Equipo</th><th>Marca</th><th>Modelo</th><th>Número de Serie</th><th>Número de Control</th><th>Institución</th><th>Formato</th><th>Acciones</th></tr></thead>";
             echo "<tbody>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
@@ -142,7 +336,7 @@ $result = $conn->query($query);
                         <td>" . htmlspecialchars($row["no_serie"]) . "</td>
                         <td>" . htmlspecialchars($row["no_control"]) . "</td>
                         <td>" . htmlspecialchars($row["compania"]) . "</td>
-                        <td><a href='formatos.php?id=" . urlencode($row["id_equipo"]) . "' class='btn btn-primary btn-formato'>Formatos</a></td>
+                        <td><a href='formatos.php?id=" . urlencode($row["id_equipo"]) . "' class='btn btn-success btn-formato'>Formatos</a></td>
                         <td>
                             <a href='editar_inventario.php?id=" . urlencode($row["id_equipo"]) . "'>Editar</a> |
                             <a href='eliminar.php?id=" . urlencode($row["id_equipo"]) . "' onclick='return confirm(\"¿Está seguro de que desea eliminar este registro?\");'>Eliminar</a>
