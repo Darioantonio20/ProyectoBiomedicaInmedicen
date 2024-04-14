@@ -48,11 +48,23 @@
             background-color: #5DADE2;
             color: white;
             cursor: pointer;
+            border-radius: 20px;
+            box-shadow: #0048A0 0px 20px 10px -15px;
+            border: none;
+            font-weight: bold;
+            background: #0048A0;
+            transition: all 0.2s ease-in-out;
         }
 
         input[type="submit"]:hover {
-            background-color: #3498DB;
+            transform: scale(1.03);
+            box-shadow: #0048A0 0px 23px 10px -20px;
         }
+        
+        input[type="submit"]:active {
+            transform: scale(0.95);
+            box-shadow: #0048A0 0px 15px 10px -10px;
+        } 
 
         .results {
             margin-top: 20px;
@@ -90,14 +102,48 @@
             padding: 10px 15px;
             border: none;
             border-radius: 4px;
-            background-color: #3498DB; /* Color del botón */
             color: white;
             cursor: pointer;
+            width: 20%;
+            font-weight: bold;
+            background: #0048A0;
+            color: white;
+            padding-block: 15px;
+            margin: 1.25rem auto; /* Centra el botón horizontalmente */
+            border-radius: 20px;
+            box-shadow: #0048A0 0px 20px 10px -15px;
+            border: none;
+            transition: all 0.2s ease-in-out;
+        }
+        #btn-salir:hover {
+            transform: scale(1.03);
+            box-shadow: #0048A0 0px 23px 10px -20px;
         }
 
-        #btn-salir:hover {
-            background-color: #2980B9; /* Color al pasar el mouse */
-        }
+        .btn-salir:active {
+            transform: scale(0.95);
+            box-shadow: #0048A0 0px 15px 10px -10px;
+        } 
+
+        .btn-primary-serch{
+        display: inline-block; /* Cambia a inline-block */
+        width: 20%;
+        font-weight: bold;
+        background: #0048A0;
+        color: white;
+        padding-block: 15px;
+        margin: 1.25rem 23% 1.25rem 5%; /* Reduce el margen izquierdo */
+        border-radius: 20px;
+        box-shadow: #0048A0 0px 20px 10px -15px;
+        border: none;
+        transition: all 0.2s ease-in-out;
+    }
+    .btn-primary-serch:hover {
+    
+    }
+
+   
+
     </style>
 </head>
 <body>
