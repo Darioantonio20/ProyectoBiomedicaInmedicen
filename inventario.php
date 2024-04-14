@@ -1,3 +1,4 @@
+
 <?php
 // Configuración de la base de datos
 $host = "127.0.0.1";
@@ -111,14 +112,14 @@ $result = $conn->query($query);
 }
 .data-table th h1 {
     font-weight: bold;
-    font-size: auto;
+    font-size: 2vw; /* Cambiado de 'auto' a '2vw' */
     text-align: center; 
     color: #ffffff;
 }
 
 .data-table td {
     font-weight: normal;
-    font-size: 1em;
+    font-size: 1vw; /* Cambiado de '1em' a '1vw' */
     text-align: center; /* Añadido para centrar el texto */
     -webkit-box-shadow: 0 2px 2px -2px #9d9d9e;
     -moz-box-shadow: 0 2px 2px -2px #9d9d9e;
@@ -128,7 +129,7 @@ $result = $conn->query($query);
 .data-table {
     text-align: center;
     overflow-x: auto; /* Added for horizontal scrolling on smaller screens */
-    width: 97%; /* Changed from 90vw to 100% for full width */
+    width: 100%; /* Changed from 90vw to 100% for full width */
     margin: 0 auto;
     display: table;
     padding: 0 0 8em 0;
@@ -139,6 +140,7 @@ $result = $conn->query($query);
     padding: 4%; 
     width: 10%; /* Added for equal width of all cells */
     margin: 1%; /* Added for spacing */
+    font-size: 1.2vw;
 }
 .data-table tr:nth-child(odd) {
     background-color: #ffffff;
@@ -197,15 +199,15 @@ $result = $conn->query($query);
     }
 
     .data-table tr {
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
         display: block;
-        border-bottom: 2px solid #ddd;
+        border-bottom: 0.125rem solid #ddd;
     }
-
+    
     .data-table td {
         display: block;
         text-align: right;
-        font-size: 13px;
+        font-size: 1.2vw; /* Cambiado de '13px' a '1.3vw' */
         border-bottom: 1px dotted #ccc;
     }
 
@@ -223,15 +225,15 @@ $result = $conn->query($query);
     }
 
     .data-table tr {
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
         display: block;
-        border-bottom: 2px solid #ddd;
+        border-bottom: 0.125rem solid #ddd;
     }
-
-    .data-table th, .data-table td {
+    
+    .data-table td {
         display: block;
         text-align: right;
-        font-size: 13px;
+        font-size: 1.2vw; 
         border-bottom: 1px dotted #ccc;
     }
 
@@ -260,13 +262,34 @@ $result = $conn->query($query);
     margin-bottom: 3rem;
     justify-content: center;
 }
-  
+.btn-primary-serch{
+    display: inline-block; /* Cambia a inline-block */
+    width: 15%;
+    font-weight: bold;
+    background: #0048A0;
+    color: white;
+    padding-block: 15px;
+    margin: 1.25rem 23% 1.25rem 5%; /* Reduce el margen izquierdo */
+    border-radius: 20px;
+    box-shadow: #0048A0 0px 20px 10px -15px;
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+.btn-primary-serch:hover {
+    transform: scale(1.03);
+    box-shadow: #0048A0 0px 23px 10px -20px;
+}
+
+.btn-primary-serch:active {
+    transform: scale(0.95);
+    box-shadow: #0048A0 0px 15px 10px -10px;
+} 
+
 .input {
-    width: 45vw;
+    width: 30vw;
     height: 6vh;
     line-height: 2rem;
     padding: 0 1rem;
-    padding-left: 2.5rem;
     border: 2px solid transparent;
     border-radius: 8px;
     outline: none;
@@ -274,12 +297,12 @@ $result = $conn->query($query);
     color: #0d0c22;
     text-align: center; /* Añadido para centrar el texto */
     box-shadow: 0 0 5px #9691c2, 0 0 0 10px #f5f5f5eb;
-    transition: .3s ease;
+    margin: 1.75rem 1rem 1.25rem 10%;
 }
   
-  .input::placeholder {
+.input::placeholder {
     color: #777;
-  }
+}
   
   .icon {
     position: absolute;
@@ -296,24 +319,29 @@ $result = $conn->query($query);
     justify-content: center;
     flex-wrap: wrap; /* Added to wrap buttons to next line if container width is not enough */
 }
-
+.heading {
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6rem;
+    color: rgb(16, 137, 211);
+}
     </style>
 </head>
 <body>
-    <h3>Busqueda en Inventario</h3>
+    <h1 class="heading text-center mt-5 mb-5">Busqueda en Inventario</h1>
     <div class="container">
         <!-- Formulario de Búsqueda actualizado -->
-        <div class="row mb-4">
-            <div class="col-lg-12">
-                <form method="GET" class="form-inline justify-content-center">
-                    <input type="text" id="search" name="search" class="input" placeholder="Buscar..." value="<?php echo htmlspecialchars($searchTerm); ?>">
-                    <button type="submit" class="btn-primary">Buscar</button> <!-- Botón verde -->
-                </form>
-            </div>
-        </div>
+<div class="row mb-12 lg-12 mb-5">
+    <div class="col-lg-12">
+        <form method="GET" class="d-flex justify-content-center">
+            <input type="text" id="search" name="search" class="input mb-0" placeholder="Buscar..." value="<?php echo htmlspecialchars($searchTerm); ?>">
+            <button type="submit" class="btn-primary-serch mb-0">Buscar</button>
+        </form>
+    </div>
+</div>
 
         <!-- Botón para añadir mantenimiento -->
-        <div class="text-center mb-4 button-row">
+        <div class="text-center mb-4 mt-5 button-row">
             <button type="button" class="btn-primary" onclick="window.location.href='mantenimiento.php';">Crear Mantenimiento</button>
             <button type="button" class="btn-primary" onclick="window.location.href='registro.html';">Añadir Equipo</button>
             <button type="button" class="btn-primary" onclick="window.location.href='insumos.php';">Busqueda de Insumo</button>
@@ -324,7 +352,7 @@ $result = $conn->query($query);
         <?php
         if ($result && $result->num_rows > 0) {
             echo "<table class='data-table'>";
-            echo "<thead class='thead-light'><tr class='colortr'><th>#</th><th>ID</th><th>Nombre del Equipo</th><th>Marca</th><th>Modelo</th><th>Número de Serie</th><th>Número de Control</th><th>Institución</th><th>Formato</th><th>Acciones</th></tr></thead>";
+            echo "<thead class='thead-light'><tr class='colortr'><th>#</th><th>ID</th><th>Nombre del Equipo</th><th>Marca</th><th>Modelo</th><th>Número de Serie</th><th>Número de Control</th><th>Institución</th><th>Formato</th><th>Acción</th></tr></thead>";
             echo "<tbody>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr>
