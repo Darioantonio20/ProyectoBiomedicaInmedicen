@@ -40,14 +40,14 @@ $result = $conn->query($query);
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
-        .btn-formato {
-            padding: 0.08rem 0.9rem;
-            font-size: 0.800rem;
-        }
+.btn-formato {
+    padding: 0.08rem 0.9rem;
+    font-size: 0.800rem;
+}
 
 .btn-primary {
     display: block;
@@ -331,15 +331,14 @@ $result = $conn->query($query);
     <h1 class="heading text-center mt-5 mb-5">Busqueda en Inventario</h1>
     <div class="container">
         <!-- Formulario de Búsqueda actualizado -->
-<div class="row mb-12 lg-12 mb-5">
-    <div class="col-lg-12">
-        <form method="GET" class="d-flex justify-content-center">
-            <input type="text" id="search" name="search" class="input mb-0" placeholder="Buscar..." value="<?php echo htmlspecialchars($searchTerm); ?>">
-            <button type="submit" class="btn-primary-serch mb-0">Buscar</button>
-        </form>
-    </div>
-</div>
-
+        <div class="row mb-12 lg-12 mb-5">
+            <div class="col-lg-12">
+                <form method="GET" class="d-flex justify-content-center">
+                    <input type="text" id="search" name="search" class="input mb-0" placeholder="Buscar..." value="<?php echo htmlspecialchars($searchTerm); ?>">
+                    <button type="submit" class="btn-primary-serch mb-0">Buscar</button>
+                </form>
+            </div>
+        </div>
         <!-- Botón para añadir mantenimiento -->
         <div class="text-center mb-4 mt-5 button-row">
             <button type="button" class="btn-primary" onclick="window.location.href='mantenimiento.php';">Crear Mantenimiento</button>
