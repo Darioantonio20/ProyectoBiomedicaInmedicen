@@ -1,4 +1,3 @@
-
 <?php
 // Configuración de la base de datos
 $host = "127.0.0.1";
